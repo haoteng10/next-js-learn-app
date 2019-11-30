@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link'
 
 const links = [
@@ -16,12 +15,15 @@ const Nav = () => (
         <Link href="/">
           <a>Home</a>
         </Link>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
       </li>
-      {links.map(({ key, href, label }) => (
+      {/* {links.map(({ key, href, label }) => (
         <li key={key}>
           <a href={href}>{label}</a>
         </li>
-      ))}
+      ))} */}
     </ul>
 
     <style jsx>{`
@@ -43,11 +45,13 @@ const Nav = () => (
       li {
         display: flex;
         padding: 6px 8px;
+        margin-left: 20px;
       }
       a {
         color: #067df7;
         text-decoration: none;
         font-size: 13px;
+        margin-left: 15px;
       }
     `}</style>
   </nav>
